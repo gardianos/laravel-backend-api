@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\Orderable;
 
 class Topic extends Model
 {
+    use Orderable;
     protected $fillable = ['title'];
     //Topic belongs to user and have many post 
     public function user(){
